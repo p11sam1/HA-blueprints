@@ -48,7 +48,7 @@ action:
       command: "{{ trigger.event.data.command }}"
       cluster_id: "{{ trigger.event.data.cluster_id }}"
       endpoint_id: "{{ trigger.event.data.endpoint_id }}"
-      args: "{{ trigger.event.data.args }}"
+#      args: "{{ trigger.event.data.args }}"
   - choose:
     - conditions:
           - "{{ command == 'on'}}"
@@ -59,7 +59,7 @@ action:
           - "{{ command == 'move_with_on_off'}}"
           - "{{ cluster_id == 8 }}"
           - "{{ endpoint_id == 1 }}"
-          - "{{ args == [0, 83] }}"
+#          - "{{ args == [0, 83] }}"
       sequence: !input "action_button_up_long"
     - conditions:
           - "{{ command == 'off'}}"
@@ -70,7 +70,7 @@ action:
           - "{{ command == 'move'}}"
           - "{{ cluster_id == 8 }}"
           - "{{ endpoint_id == 1 }}"
-          - "{{ args == [1, 83, 0, 0] }}"
+#          - "{{ args == [1, 83, 0, 0] }}"
       sequence: !input "action_button_down_long"
 
 mode: single
