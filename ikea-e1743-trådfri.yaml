@@ -3,40 +3,39 @@ blueprint:
   description: Blueprint for Ikea E1743 Trådfri switch
   source_url: https://github.com/p11sam1/HA-blueprints/blob/main/ikea-e1743-tr%C3%A5dfri.yaml
   domain: automation
-
-input:
-  remote:
-    name: Remote
-    description: (Required) Choose IKEA remote to use.
-    selector:
-      device: 
-        integration: zha
-        manufacturer: IKEA of Sweden
-        model: TRADFRI on/off switch
-  action_button_up_short:
-    name: (Optional) Up button short press
-    description: Action to run on short up button press.
-    default: []
-    selector:
-      action:
-  action_button_up_long:
-    name: (Optional) Up button long press
-    description: Action to run on long up button press.
-    default: []
-    selector:
-      action:
-  action_button_down_short:
-    name: (Optional) Down button short press
-    description: Action to run on short down button press.
-    default: []
-    selector:
-      action:
-  action_button_down_long:
-    name: (Optional) Down button long press
-    description: Action to run on long down button press.
-    default: []
-    selector:
-      action:
+  input:
+    remote:
+      name: Remote
+      description: Choose IKEA remote to use.
+      selector:
+        device: 
+          integration: zha
+          manufacturer: IKEA of Sweden
+          model: TRADFRI on/off switch
+    action_button_up_short:
+      name: Up button short press
+      description: Action to run on short up button press.
+      default: []
+      selector:
+        action:
+    action_button_up_long:
+      name: Up button long press
+      description: Action to run on long up button press.
+      default: []
+      selector:
+        action:
+    action_button_down_short:
+      name: Down button short press
+      description: Action to run on short down button press.
+      default: []
+      selector:
+        action:
+    action_button_down_long:
+      name: Down button long press
+      description: Action to run on long down button press.
+      default: []
+      selector:
+        action:
 
 trigger:
   platform: event
