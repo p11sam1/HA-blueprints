@@ -1,7 +1,7 @@
 blueprint:
   name: Ikea E1743 Trådfri
   description: Blueprint for Ikea E1743 Trådfri switch
-  source_url: https://github.com/p11sam1/HA-blueprints/ikea-e1743-trådfri.yaml
+  source_url: https://github.com/p11sam1/HA-blueprints/blob/main/ikea-e1743-tr%C3%A5dfri.yaml
   domain: automation
 
 input:
