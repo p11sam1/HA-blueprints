@@ -55,24 +55,24 @@ action:
         - "{{ command == 'on'}}"
         - "{{ cluster_id == 6 }}"
         - "{{ endpoint_id == 1 }}"
-      sequence: !input action_button_up_short
+      sequence: !input "action_button_up_short"
     - conditions:
         - "{{ command == 'move_with_on_off'}}"
         - "{{ cluster_id == 8 }}"
         - "{{ endpoint_id == 1 }}"
         - "{{ args == [0, 83] }}"
-      sequence: !input action_button_up_long
+      sequence: !input "action_button_up_long"
     - conditions:
         - "{{ command == 'off'}}"
         - "{{ cluster_id == 6 }}"
         - "{{ endpoint_id == 1 }}"
-      sequence: !input action_button_down_short
+      sequence: !input "action_button_down_short"
     - conditions:
         - "{{ command == 'move'}}"
         - "{{ cluster_id == 8 }}"
         - "{{ endpoint_id == 1 }}"
         - "{{ args == [1, 83, 0, 0] }}"
-      sequence: !input action_button_down_long
+      sequence: !input "action_button_down_long"
 
 mode: restart
 max_exceeded: single
