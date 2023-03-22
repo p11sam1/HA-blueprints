@@ -1,5 +1,5 @@
 blueprint:
-  name: Ikea E1743 Trådfri
+  name: Ikea Remote Control N2 Trådfri
   description: Blueprint for Ikea E1743 Trådfri switch
   source_url: https://github.com/p11sam1/HA-blueprints/blob/main/ikea-remote_control_n2-tradfri.yaml
   domain: automation
