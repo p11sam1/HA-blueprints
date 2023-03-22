@@ -96,18 +96,18 @@ action:
           - "{{ endpoint_id == 1 }}"
 #          - "{{ args == [1, 83, 0, 0] }}"
       sequence: !input "action_button_down_long"
-      - conditions:
+    - conditions:
           - "{{ command == 'press'}}"
           - "{{ cluster_id == 5 }}"
           - "{{ endpoint_id == 1 }}"
           - "{{ args == [257, 13, 0] }}"
-        sequence: !input "action_button_left_short"
-      - conditions:
+      sequence: !input "action_button_left_short"
+    - conditions:
           - "{{ command == 'press'}}"
           - "{{ cluster_id == 8 }}"
           - "{{ endpoint_id == 1 }}"
           - "{{ args == [1, 83, 0] }}"
-        sequence: !input "action_button_right_short"
+      sequence: !input "action_button_right_short"
 
 mode: single
 max_exceeded: silent
